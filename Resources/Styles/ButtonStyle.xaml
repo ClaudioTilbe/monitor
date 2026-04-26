@@ -1,0 +1,615 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+
+    
+    
+    
+    <Style x:Key="CloseButtonStyle" TargetType="Button">
+
+        <Setter Property="Background">
+            <Setter.Value>
+                <SolidColorBrush Color="Transparent"/>
+            </Setter.Value>
+        </Setter>
+
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Width" Value="40"/>
+        <Setter Property="Height" Value="40"/>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+
+                    <Border x:Name="Border"
+                      Background="{TemplateBinding Background}">
+                        <ContentPresenter 
+                      HorizontalAlignment="Center"
+                      VerticalAlignment="Center"/>
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+
+                        <!-- Hover IN -->
+                        <EventTrigger RoutedEvent="MouseEnter">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <ColorAnimation 
+                                  Storyboard.TargetName="Border"
+                                  Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                  To="#E81123"
+                                  Duration="0:0:0.2"/>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+
+                        <!-- Hover OUT -->
+                        <EventTrigger RoutedEvent="MouseLeave">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <ColorAnimation 
+                                  Storyboard.TargetName="Border"
+                                  Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                  To="Transparent"
+                                  Duration="0:0:0.2"/>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+
+                    </ControlTemplate.Triggers>
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+    </Style>
+
+
+
+    <Style x:Key="WindowButtonStyle" TargetType="Button">
+
+        <Setter Property="Background">
+            <Setter.Value>
+                <SolidColorBrush Color="Transparent"/>
+            </Setter.Value>
+        </Setter>
+
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Width" Value="40"/>
+        <Setter Property="Height" Value="40"/>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+
+                    <Border x:Name="Border"
+                      Background="{TemplateBinding Background}">
+                        <ContentPresenter 
+                      HorizontalAlignment="Center"
+                      VerticalAlignment="Center"/>
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+
+                        <!-- Hover IN -->
+                        <EventTrigger RoutedEvent="MouseEnter">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <ColorAnimation 
+                                  Storyboard.TargetName="Border"
+                                  Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                  To="#20FFFFFF"
+                                  Duration="0:0:0.2"/>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+
+                        <!-- Hover OUT -->
+                        <EventTrigger RoutedEvent="MouseLeave">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <ColorAnimation 
+                                  Storyboard.TargetName="Border"
+                                  Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                  To="Transparent"
+                                  Duration="0:0:0.2"/>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+
+                    </ControlTemplate.Triggers>
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+    </Style>
+
+
+
+
+
+
+    <Style x:Key="btnBlanco" TargetType="Button">
+
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="BorderBrush" Value="White"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Padding" Value="6,3"/>
+        <Setter Property="Margin" Value="5" />
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
+
+        <!-- Plantilla personalizada para animación de hover -->
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="border"
+                      Background="{TemplateBinding Background}"
+                      BorderBrush="{TemplateBinding BorderBrush}"
+                      BorderThickness="{TemplateBinding BorderThickness}"
+                      CornerRadius="3">
+                        <ContentPresenter HorizontalAlignment="Center" 
+                                    VerticalAlignment="Center"/>
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+                        <!-- Hover -->
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Trigger.EnterActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <!-- Fondo azul intenso al hover -->
+                                        <ColorAnimation Storyboard.TargetName="border"
+                                                  Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                                  To="#FF3A8EDC" Duration="0:0:0.3"/>
+                                        <!-- Borde azul claro al hover -->
+                                        <ColorAnimation Storyboard.TargetName="border"
+                                                  Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)"
+                                                  To="#FF7ECFFF" Duration="0:0:0.3"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <!-- Volver a fondo transparente -->
+                                        <ColorAnimation Storyboard.TargetName="border"
+                                                  Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                                  To="Transparent" Duration="0:0:0.3"/>
+                                        <!-- Volver a borde blanco -->
+                                        <ColorAnimation Storyboard.TargetName="border"
+                                                  Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)"
+                                                  To="White" Duration="0:0:0.3"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.ExitActions>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+
+    <Style x:Key="btnVerde" TargetType="Button">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="BorderBrush" Value="Green"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Padding" Value="6,3"/>
+        <Setter Property="Margin" Value="5" />
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="border"
+                      Background="{TemplateBinding Background}"
+                      BorderBrush="{TemplateBinding BorderBrush}"
+                      BorderThickness="{TemplateBinding BorderThickness}"
+                      CornerRadius="3">
+                        <ContentPresenter HorizontalAlignment="Center" 
+                                    VerticalAlignment="Center"/>
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Trigger.EnterActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <!-- Fondo verde intenso al hover -->
+                                        <ColorAnimation Storyboard.TargetName="border"
+                                                  Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                                  To="#FF28A745" Duration="0:0:0.3"/>
+                                        <!-- Borde verde más claro al hover -->
+                                        <ColorAnimation Storyboard.TargetName="border"
+                                                  Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)"
+                                                  To="#FF71D97B" Duration="0:0:0.3"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ColorAnimation Storyboard.TargetName="border"
+                                                  Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                                  To="Transparent" Duration="0:0:0.3"/>
+                                        <ColorAnimation Storyboard.TargetName="border"
+                                                  Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)"
+                                                  To="Green" Duration="0:0:0.3"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.ExitActions>
+                        </Trigger>
+
+
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Foreground" Value="#888"/>
+
+                            <!-- cuando se deshabilita -->
+                            <Trigger.EnterActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ColorAnimation Storyboard.TargetName="border"
+                              Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)"
+                              To="#666"
+                              Duration="0:0:0.2"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>
+
+                            <!-- cuando se vuelve a habilitar -->
+                            <Trigger.ExitActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ColorAnimation Storyboard.TargetName="border"
+                              Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)"
+                              To="Green"
+                              Duration="0:0:0.2"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.ExitActions>
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+
+    <Style x:Key="btnRojo" TargetType="Button">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="BorderBrush" Value="Red"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Padding" Value="6,3"/>
+        <Setter Property="Margin" Value="5" />
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="border"
+                      Background="{TemplateBinding Background}"
+                      BorderBrush="{TemplateBinding BorderBrush}"
+                      BorderThickness="{TemplateBinding BorderThickness}"
+                      CornerRadius="3">
+                        <ContentPresenter HorizontalAlignment="Center" 
+                                    VerticalAlignment="Center"/>
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Trigger.EnterActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <!-- Fondo rojo intenso al hover -->
+                                        <ColorAnimation Storyboard.TargetName="border"
+                                                  Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                                  To="#FFDC3545" Duration="0:0:0.3"/>
+                                        <!-- Borde rojo más claro al hover -->
+                                        <ColorAnimation Storyboard.TargetName="border"
+                                                  Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)"
+                                                  To="#FFFF6B6B" Duration="0:0:0.3"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ColorAnimation Storyboard.TargetName="border"
+                                                  Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                                  To="Transparent" Duration="0:0:0.3"/>
+                                        <ColorAnimation Storyboard.TargetName="border"
+                                                  Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)"
+                                                  To="Red" Duration="0:0:0.3"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.ExitActions>
+                        </Trigger>
+
+
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="border" Property="BorderBrush" Value="#666"/>
+                            <Setter TargetName="border" Property="Background" Value="Transparent"/>
+                            <Setter Property="Foreground" Value="#888"/>
+                        </Trigger>
+
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+
+    <Style x:Key="btnFlecha" TargetType="Button">
+
+        <!-- Base -->
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+
+        <!-- Transform para animación -->
+        <Setter Property="RenderTransform">
+            <Setter.Value>
+                <TranslateTransform Y="0"/>
+            </Setter.Value>
+        </Setter>
+
+        <!-- Template limpio -->
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <ContentPresenter HorizontalAlignment="Center"
+                                VerticalAlignment="Center"/>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+        <!-- Animaciones -->
+        <Style.Triggers>
+
+            <!-- HOVER -->
+            <Trigger Property="IsMouseOver" Value="True">
+                <Trigger.EnterActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation
+                          Storyboard.TargetProperty="(RenderTransform).(TranslateTransform.Y)"
+                          To="-5"
+                          Duration="0:0:0.15"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.EnterActions>
+
+                <Trigger.ExitActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation
+                          Storyboard.TargetProperty="(RenderTransform).(TranslateTransform.Y)"
+                          To="0"
+                          Duration="0:0:0.15"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.ExitActions>
+            </Trigger>
+
+        </Style.Triggers>
+    </Style>
+
+
+
+    <Style x:Key="btnBlancoGuia" TargetType="Button">
+        <!-- Propiedades por defecto -->
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="BorderBrush" Value="White"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Padding" Value="6,3"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
+
+        <!-- Plantilla personalizada para animación de hover -->
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="border"
+                  Background="{TemplateBinding Background}"
+                  BorderBrush="{TemplateBinding BorderBrush}"
+                  BorderThickness="{TemplateBinding BorderThickness}"
+                  CornerRadius="3">
+                        <ContentPresenter HorizontalAlignment="Center" 
+                                VerticalAlignment="Center"/>
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+                        <!-- Hover -->
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Trigger.EnterActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <!-- Fondo azul intenso al hover -->
+                                        <ColorAnimation Storyboard.TargetName="border"
+                                              Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                              To="#FF3A8EDC" Duration="0:0:0.3"/>
+                                        <!-- Borde azul claro al hover -->
+                                        <ColorAnimation Storyboard.TargetName="border"
+                                              Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)"
+                                              To="#FF7ECFFF" Duration="0:0:0.3"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <!-- Volver a fondo transparente -->
+                                        <ColorAnimation Storyboard.TargetName="border"
+                                              Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                              To="Transparent" Duration="0:0:0.3"/>
+                                        <!-- Volver a borde blanco -->
+                                        <ColorAnimation Storyboard.TargetName="border"
+                                              Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)"
+                                              To="White" Duration="0:0:0.3"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.ExitActions>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+
+
+
+
+
+    <Style x:Key="btnMonitoreo" TargetType="Button">
+
+        <!-- base -->
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Padding" Value="6,3"/>
+        <Setter Property="Margin" Value="5"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
+
+        <!-- color por defecto -->
+        <Setter Property="BorderBrush" Value="White"/>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+
+                    <Border x:Name="border"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="3">
+
+                        <ContentPresenter HorizontalAlignment="Center"
+                                      VerticalAlignment="Center"/>
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+
+                        <!-- HOVER -->
+                        <MultiDataTrigger>
+                            <MultiDataTrigger.Conditions>
+                                <Condition Binding="{Binding EstaOnline}" Value="True"/>
+                                <Condition Binding="{Binding IsMouseOver, RelativeSource={RelativeSource TemplatedParent}}" Value="True"/>
+                            </MultiDataTrigger.Conditions>
+
+                            <MultiDataTrigger.EnterActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ColorAnimation Storyboard.TargetName="border"
+                                        Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                        To="#FF28A745" Duration="0:0:0.3"/>
+
+                                        <ColorAnimation Storyboard.TargetName="border"
+                                        Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)"
+                                        To="#FF71D97B" Duration="0:0:0.3"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </MultiDataTrigger.EnterActions>
+
+                            <MultiDataTrigger.ExitActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ColorAnimation Storyboard.TargetName="border"
+                                        Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                        To="Transparent" Duration="0:0:0.3"/>
+
+                                        <ColorAnimation Storyboard.TargetName="border"
+                                        Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)"
+                                        To="Green" Duration="0:0:0.3"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </MultiDataTrigger.ExitActions>
+                        </MultiDataTrigger>
+
+
+                        <!-- OFFLINE HOVER -->
+                        <MultiDataTrigger>
+                            <MultiDataTrigger.Conditions>
+                                <Condition Binding="{Binding EstaOnline}" Value="False"/>
+                                <Condition Binding="{Binding IsMouseOver, RelativeSource={RelativeSource TemplatedParent}}" Value="True"/>
+                            </MultiDataTrigger.Conditions>
+
+                            <MultiDataTrigger.EnterActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ColorAnimation Storyboard.TargetName="border"
+                                        Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                        To="#FFDC3545" Duration="0:0:0.3"/>
+
+                                        <ColorAnimation Storyboard.TargetName="border"
+                                        Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)"
+                                        To="#FFFF6B6B" Duration="0:0:0.3"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </MultiDataTrigger.EnterActions>
+
+                            <MultiDataTrigger.ExitActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ColorAnimation Storyboard.TargetName="border"
+                                        Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                        To="Transparent" Duration="0:0:0.3"/>
+
+                                        <ColorAnimation Storyboard.TargetName="border"
+                                        Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)"
+                                        To="Red" Duration="0:0:0.3"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </MultiDataTrigger.ExitActions>
+                        </MultiDataTrigger>
+
+
+                        <!-- DISABLED -->
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Foreground" Value="#888"/>
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+        <!-- COLOR BASE SEGÚN ESTADO -->
+        <Style.Triggers>
+
+            <DataTrigger Binding="{Binding EstaOnline}" Value="True">
+                <Setter Property="BorderBrush" Value="Green"/>
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding EstaOnline}" Value="False">
+                <Setter Property="BorderBrush" Value="Red"/>
+            </DataTrigger>
+
+        </Style.Triggers>
+
+    </Style>
+
+
+
+
+
+
+
+</ResourceDictionary>

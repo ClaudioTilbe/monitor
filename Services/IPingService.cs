@@ -1,0 +1,17 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Monitor.Services
+{
+    public interface IPingService
+    {
+
+        Task<bool> HacerPingAsync(string ip);
+
+
+
+    }
+}

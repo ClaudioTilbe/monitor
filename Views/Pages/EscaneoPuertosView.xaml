@@ -1,0 +1,178 @@
+﻿<UserControl x:Class="Monitor.Views.Pages.EscaneoPuertosView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Monitor.Views.Pages"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    
+    <UserControl.Resources>
+
+        <!-- SCROLLBAR -->
+        <Style x:Key="ScrollBarDark" TargetType="ScrollBar">
+            <Setter Property="Width" Value="10"/>
+            <Setter Property="Background" Value="Transparent"/>
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ScrollBar">
+                        <Grid Background="Transparent">
+
+                            <Track x:Name="PART_Track"
+                           IsDirectionReversed="True">
+
+                                <Track.Thumb>
+                                    <Thumb Margin="2">
+                                        <Thumb.Template>
+                                            <ControlTemplate TargetType="Thumb">
+                                                <Border x:Name="thumbBorder"
+                                                Background="#555"
+                                                CornerRadius="5"/>
+                                                <ControlTemplate.Triggers>
+                                                    <Trigger Property="IsMouseOver" Value="True">
+                                                        <Setter TargetName="thumbBorder"
+                                                        Property="Background"
+                                                        Value="#888"/>
+                                                    </Trigger>
+                                                </ControlTemplate.Triggers>
+                                            </ControlTemplate>
+                                        </Thumb.Template>
+                                    </Thumb>
+                                </Track.Thumb>
+
+                            </Track>
+
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+    </UserControl.Resources>
+
+
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="15"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="45"/>
+            <RowDefinition Height="15"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="45"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="45"/>
+        </Grid.ColumnDefinitions>
+
+
+        <Border Grid.Row="1" Grid.Column="1"
+    Background="#232227"
+    BorderBrush="#444"
+    BorderThickness="1"
+    CornerRadius="8"
+    ClipToBounds="True">
+
+            <ScrollViewer>
+
+                <ScrollViewer.Resources>
+                    <Style TargetType="ScrollBar" BasedOn="{StaticResource ScrollBarDark}"/>
+                </ScrollViewer.Resources>
+
+                <TextBox x:Name="txbOutput"
+                         Text="{Binding Output}"
+                         AcceptsReturn="True"
+                         TextWrapping="Wrap"
+                         VerticalScrollBarVisibility="Auto"
+
+             Background="Transparent"
+             Foreground="White"
+             BorderThickness="0"
+
+             Padding="10"
+
+             FontFamily="Consolas"
+             FontSize="13"
+
+             IsReadOnly="True"/>
+
+            </ScrollViewer>
+
+        </Border>
+
+
+        <Grid Grid.Column="3"
+        Grid.Row="1" Cursor="">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <!-- parte superior -->
+                <RowDefinition Height="*"/>
+                <!-- espacio flexible -->
+                <RowDefinition Height="Auto"/>
+                <!-- parte inferior -->
+            </Grid.RowDefinitions>
+
+            <!-- ARRIBA -->
+            <StackPanel Grid.Row="0">
+
+                <TextBlock Text="Escaneo IP"
+             Margin="0,0,0,5"
+             Foreground="White"
+             FontSize="18"
+             FontWeight="Bold"/>
+
+                <TextBox x:Name="txtIP"
+                         Margin="0,0,0,10"
+                         Text="{Binding IP, UpdateSourceTrigger=PropertyChanged}"
+                         Style="{StaticResource txtFormulario}"/>
+
+            </StackPanel>
+
+            <!-- ABAJO -->
+            <StackPanel Grid.Row="2">
+
+                <Button x:Name="btnEscaneo"
+                    Content="Iniciar Escaneo"
+                    Height="35"
+                    Command="{Binding IniciarEscaneoCommand}"
+                    Style="{StaticResource btnVerde}" Cursor="Hand"/>
+
+
+            </StackPanel>
+
+        </Grid>
+
+
+        <Border  Grid.Column="1"
+           Grid.Row="3"
+           Grid.ColumnSpan="3"
+           CornerRadius="4"
+           Background="#22FFFFFF"
+           BorderBrush="#44FFFFFF"
+           BorderThickness="1">
+
+            <Label Content="{Binding Mensaje}"
+              x:Name="lblMensaje"
+              Padding="10, 0, 0, 0"
+              FontSize="16"
+              HorizontalAlignment="Stretch"
+              VerticalAlignment="Stretch"
+              VerticalContentAlignment="Center"
+              Foreground="White"
+              Background="Transparent"/>
+            
+        </Border>
+
+
+
+    </Grid>
+    
+    
+</UserControl>

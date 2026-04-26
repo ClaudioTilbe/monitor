@@ -1,0 +1,106 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+
+    <Style x:Key="VerticalMenuButtonStyle" TargetType="Button">
+
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="HorizontalContentAlignment" Value="Left"/>
+        <Setter Property="Padding" Value="0"/>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+
+                    <Border x:Name="Border"
+                     Background="{TemplateBinding Background}"
+                     Padding="5">
+
+                        <Grid>
+
+                            <!-- Barra izquierda -->
+                            <Border x:Name="LeftIndicator"
+                             Width="0"
+                             Background="DeepSkyBlue"
+                             HorizontalAlignment="Left"
+                             CornerRadius="0,3,3,0"/>
+
+                            <!-- Contenido -->
+                            <ContentPresenter x:Name="Content"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}">
+
+                                <ContentPresenter.RenderTransform>
+                                    <TranslateTransform x:Name="ContentTransform" X="0"/>
+                                </ContentPresenter.RenderTransform>
+
+                            </ContentPresenter>
+
+                        </Grid>
+
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+
+                        <!-- HOVER -->
+                        <Trigger Property="IsMouseOver" Value="True">
+
+                            <Setter TargetName="Border" Property="Background" Value="#20FFFFFF"/>
+
+                            <Trigger.EnterActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+
+                                        <!-- Barra -->
+                                        <DoubleAnimation Storyboard.TargetName="LeftIndicator"
+                                                  Storyboard.TargetProperty="Width"
+                                                  To="5"
+                                                  Duration="0:0:0.2"/>
+
+                                        <!-- Movimiento suave -->
+                                        <DoubleAnimation Storyboard.TargetName="ContentTransform"
+                                                  Storyboard.TargetProperty="X"
+                                                  To="5"
+                                                  Duration="0:0:0.2"/>
+
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>
+
+                            <Trigger.ExitActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+
+                                        <DoubleAnimation Storyboard.TargetName="LeftIndicator"
+                                                  Storyboard.TargetProperty="Width"
+                                                  To="0"
+                                                  Duration="0:0:0.2"/>
+
+                                        <DoubleAnimation Storyboard.TargetName="ContentTransform"
+                                                  Storyboard.TargetProperty="X"
+                                                  To="0"
+                                                  Duration="0:0:0.2"/>
+
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.ExitActions>
+
+                        </Trigger>
+
+                        <!-- Click -->
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="Border" Property="Background" Value="#30FFFFFF"/>
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+    </Style>
+    
+
+</ResourceDictionary>

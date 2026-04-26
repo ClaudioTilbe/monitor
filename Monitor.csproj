@@ -1,0 +1,134 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <Platforms>AnyCPU;x86;ARM64</Platforms>
+    <ApplicationIcon>Resources\Icons\favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\Fonts\balanzas.png" />
+    <None Remove="Resources\Fonts\close.png" />
+    <None Remove="Resources\Fonts\collapse.png" />
+    <None Remove="Resources\Fonts\configuracion.png" />
+    <None Remove="Resources\Fonts\escaneopuertos.png" />
+    <None Remove="Resources\Fonts\favicon.ico" />
+    <None Remove="Resources\Fonts\favicon.png" />
+    <None Remove="Resources\Fonts\flechaAdelante.png" />
+    <None Remove="Resources\Fonts\flechaAtras.png" />
+    <None Remove="Resources\Fonts\impresoras.png" />
+    <None Remove="Resources\Fonts\maximize.png" />
+    <None Remove="Resources\Fonts\menuvnc.png" />
+    <None Remove="Resources\Fonts\minimize.png" />
+    <None Remove="Resources\Fonts\Montserrat-Black.ttf" />
+    <None Remove="Resources\Fonts\Montserrat-BlackItalic.ttf" />
+    <None Remove="Resources\Fonts\Montserrat-Bold.ttf" />
+    <None Remove="Resources\Fonts\Montserrat-BoldItalic.ttf" />
+    <None Remove="Resources\Fonts\Montserrat-ExtraBold.ttf" />
+    <None Remove="Resources\Fonts\Montserrat-ExtraBoldItalic.ttf" />
+    <None Remove="Resources\Fonts\Montserrat-ExtraLight.ttf" />
+    <None Remove="Resources\Fonts\Montserrat-ExtraLightItalic.ttf" />
+    <None Remove="Resources\Fonts\Montserrat-Italic-VariableFont_wght.ttf" />
+    <None Remove="Resources\Fonts\Montserrat-Italic.ttf" />
+    <None Remove="Resources\Fonts\Montserrat-Light.ttf" />
+    <None Remove="Resources\Fonts\Montserrat-LightItalic.ttf" />
+    <None Remove="Resources\Fonts\Montserrat-Medium.ttf" />
+    <None Remove="Resources\Fonts\Montserrat-MediumItalic.ttf" />
+    <None Remove="Resources\Fonts\Montserrat-Regular.ttf" />
+    <None Remove="Resources\Fonts\Montserrat-SemiBold.ttf" />
+    <None Remove="Resources\Fonts\Montserrat-SemiBoldItalic.ttf" />
+    <None Remove="Resources\Fonts\Montserrat-Thin.ttf" />
+    <None Remove="Resources\Fonts\Montserrat-ThinItalic.ttf" />
+    <None Remove="Resources\Fonts\Montserrat-VariableFont_wght.ttf" />
+    <None Remove="Resources\Fonts\switch.png" />
+    <None Remove="Resources\Icons\favicon.ico" />
+    <None Remove="Resources\Icons\favicon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="11.0.0-preview.2.26159.112" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="11.0.0-preview.3.26207.106" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Fonts\Montserrat-Black.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Fonts\Montserrat-BlackItalic.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Fonts\Montserrat-Bold.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Fonts\Montserrat-BoldItalic.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Fonts\Montserrat-ExtraBold.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Fonts\Montserrat-ExtraBoldItalic.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Fonts\Montserrat-ExtraLight.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Fonts\Montserrat-ExtraLightItalic.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Fonts\Montserrat-Italic-VariableFont_wght.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Fonts\Montserrat-Italic.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Fonts\Montserrat-Light.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Fonts\Montserrat-LightItalic.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Fonts\Montserrat-Medium.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Fonts\Montserrat-MediumItalic.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Fonts\Montserrat-Regular.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Fonts\Montserrat-SemiBold.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Fonts\Montserrat-SemiBoldItalic.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Fonts\Montserrat-Thin.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Fonts\Montserrat-ThinItalic.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Fonts\Montserrat-VariableFont_wght.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Icons\balanzas.png" />
+    <Resource Include="Resources\Icons\close.png" />
+    <Resource Include="Resources\Icons\collapse.png" />
+    <Resource Include="Resources\Icons\configuracion.png" />
+    <Resource Include="Resources\Icons\escaneopuertos.png" />
+    <Resource Include="Resources\Icons\favicon.ico" />
+    <Resource Include="Resources\Icons\favicon.png" />
+    <Resource Include="Resources\Icons\flechaAdelante.png" />
+    <Resource Include="Resources\Icons\flechaAtras.png" />
+    <Resource Include="Resources\Icons\impresoras.png" />
+    <Resource Include="Resources\Icons\maximize.png" />
+    <Resource Include="Resources\Icons\menuvnc.png" />
+    <Resource Include="Resources\Icons\minimize.png" />
+    <Resource Include="Resources\Icons\switch.png" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,21 @@
+# Carpetas de compilación
+bin/
+obj/
+
+# Visual Studio
+.vs/
+
+# Archivos de usuario
+*.user
+*.suo
+
+# Caché
+*.cache
+*.db
+
+# Logs
+*.log
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
