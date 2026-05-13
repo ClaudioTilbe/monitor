@@ -28,11 +28,11 @@ El objetivo principal es brindar una solución liviana y práctica para usuarios
 
 ---
 
-# :link: Características principales
+# :link: Funciones
 
 ## 🖥️ Menú de Accesos VNC
 
-El menú principal de AccesosVNC consiste en una grilla configurable dividida en módulos visuales.
+El menú principal de Accesos VNC consiste en una grilla configurable dividida en módulos visuales.
 
 ### Estructura de la grilla
 
