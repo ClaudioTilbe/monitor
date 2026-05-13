@@ -276,7 +276,9 @@ El proyecto fue desarrollado utilizando el patrón MVVM.
 
 ---
 
-# :link: Objetivos del proyecto
+# :link: Finalidad del proyecto
+
+## Objetivos del software
 
 Monitor fue desarrollado como una pequeña herramienta enfocada en:
 
@@ -294,6 +296,34 @@ La aplicación busca ser:
 - Fácil de configurar
 - Adaptable a cambios en la infraestructura local
 - Rápida de utilizar en entornos operativos reales
+
+## Objetivos personales
+
+A nivel personal, este proyecto representó una oportunidad para profundizar en el desarrollo de aplicaciones de escritorio modernas utilizando tecnologías del ecosistema .NET, con un enfoque orientado tanto al aprendizaje técnico como al diseño de una herramienta funcional para entornos reales.
+
+Uno de los principales objetivos fue trabajar sobre una interfaz visual minimalista, clara y fluida, utilizando XAML como tecnología principal para la construcción de la UI. El proyecto permitió explorar en profundidad el funcionamiento de WPF, comprendiendo conceptos relacionados a renderizado visual, composición de interfaces, estilos, bindings y manejo dinámico de componentes.
+
+También se hizo especial énfasis en la implementación de una arquitectura MVVM lo más desacoplada y limpia posible, buscando mantener una correcta separación de responsabilidades entre vistas, lógica de negocio y manejo de estados. Esto permitió desarrollar una base más mantenible, escalable y sencilla de extender a futuro.
+
+Otro de los desafíos personales del proyecto fue trabajar con elementos dinámicos dentro de una Grid, logrando implementar un sistema visual compuesto por múltiples capas de componentes. Esto me permitió generar una interfaz configurable por el usuario, con componentes que podían agregarse dinámicamente dentro de distintas secciones del panel.
+
+Durante el desarrollo también se incorporaron tecnologías y conceptos nuevos, entre ellos:
+
+- Inyección de dependencias para desacoplar servicios y mejorar la organización general de la aplicación.
+- Integración con SQLite como base de datos liviana y embebida para persistencia local de configuraciones y datos.
+- Integración con Nmap para ejecutar análisis de red directamente desde la aplicación.
+- Procesamiento de resultados XML generados por Nmap para extraer y mostrar información relevante de manera estructurada.
+
+El proyecto también sirvió como práctica para trabajar con:
+
+- Monitoreo de conectividad mediante ping.
+- Interacción con procesos externos del sistema operativo.
+- Manipulación dinámica de componentes visuales.
+- Diseño de herramientas orientadas a infraestructura y redes.
+- Organización de proyectos de escritorio bajo una arquitectura mantenible.
+
+En conjunto, el desarrollo de Monitor funcionó tanto como una herramienta de uso práctico como un espacio de aprendizaje técnico para experimentar distintas tecnologías, patrones y enfoques de diseño dentro del ecosistema WPF y .NET.
+
 
 ---
 
