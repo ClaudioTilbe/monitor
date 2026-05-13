@@ -1,6 +1,6 @@
 ![](./assets/header.png)
 
-## Descripción
+# :link: Descripción
 
 Monitor es una herramienta de escritorio desarrollada en WPF utilizando el patrón MVVM, orientada a simplificar tareas de monitoreo, acceso y administración básica de dispositivos dentro de una infraestructura local.
 
@@ -17,7 +17,7 @@ El objetivo principal es brindar una solución liviana y práctica para usuarios
 
 ---
 
-# Tecnologías utilizadas
+# :link: Tecnologías utilizadas
 
 - WPF (.NET)
 - Patrón MVVM
@@ -28,7 +28,7 @@ El objetivo principal es brindar una solución liviana y práctica para usuarios
 
 ---
 
-# Características principales
+# :link: Características principales
 
 ## Menú de Accesos VNC
 
@@ -262,7 +262,7 @@ Esto permite adaptar la herramienta fácilmente a distintos entornos sin necesid
 
 ---
 
-# Arquitectura
+# :link: Arquitectura
 
 El proyecto fue desarrollado utilizando el patrón MVVM.
 
@@ -276,7 +276,7 @@ El proyecto fue desarrollado utilizando el patrón MVVM.
 
 ---
 
-# Objetivos del proyecto
+# :link: Objetivos del proyecto
 
 Monitor fue desarrollado como una pequeña herramienta enfocada en:
 
