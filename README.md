@@ -22,11 +22,24 @@ El objetivo principal es brindar una solución liviana y práctica para usuarios
 
 # :link: Tecnologías utilizadas
 
+## UI / Frontend
 - WPF (.NET)
-- Patrón MVVM
+- XAML
+- Data Binding
+- Dynamic Grid Layouts
+
+## Arquitectura
+- MVVM
+- Dependency Injection
+- ICommand / RelayCommand
+
+## Persistencia y datos
+- SQLite
 - XML Processing
+
+## Networking
+- Ping Monitoring
 - Nmap Integration
-- Ping / Network Monitoring
 - VNC Integration
 
 ---
