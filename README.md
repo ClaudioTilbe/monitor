@@ -30,7 +30,7 @@ El objetivo principal es brindar una solución liviana y práctica para usuarios
 
 # :link: Características principales
 
-## Menú de Accesos VNC
+## 🖥️ Menú de Accesos VNC
 
 El menú principal de AccesosVNC consiste en una grilla configurable dividida en módulos visuales.
 
@@ -129,7 +129,7 @@ Restricción:
 
 ---
 
-# Menú Balanzas
+# ⚖️ Menú Balanzas
 
 El menú Balanzas está orientado al monitoreo de conectividad de dispositivos de pesaje dentro de la red local.
 
@@ -147,7 +147,7 @@ El funcionamiento general es similar al sistema utilizado en Accesos VNC.
 
 ---
 
-# Menú Dispositivos
+# 🌐 Menú Dispositivos
 
 El menú Dispositivos permite centralizar accesos y monitoreo de distintos equipos de infraestructura.
 
@@ -175,7 +175,7 @@ Especialmente útil para:
 
 ---
 
-# Menú Análisis de Subred
+# 🔍 Menú Análisis de Subred
 
 Herramienta destinada a descubrimiento básico de dispositivos dentro de una subred.
 
@@ -209,7 +209,7 @@ La aplicación:
 
 ---
 
-# Escaneo de Puertos
+# 🚪 Escaneo de Puertos
 
 La aplicación incorpora integración con Nmap para análisis más avanzados de red.
 
@@ -247,7 +247,7 @@ El sistema puede mostrar:
 
 ---
 
-# Menú Configuración
+# ⚙️ Menú Configuración
 
 La aplicación dispone de un menú de configuración para administrar rutas y parámetros dinámicos.
 
