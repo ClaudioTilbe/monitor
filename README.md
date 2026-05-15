@@ -1,9 +1,9 @@
-# Aún en proceso!! 
+# > Proyecto actualmente en desarrollo y evolución continua.
 
 
 ![](./assets/header.png)
 
-Monitor es una herramienta de escritorio desarrollada en WPF utilizando el patrón MVVM, orientada a simplificar tareas de monitoreo, acceso y administración básica de dispositivos dentro de una infraestructura local.
+**Monitor** es una herramienta de escritorio desarrollada en WPF utilizando el patrón MVVM, orientada a simplificar tareas de monitoreo, acceso y administración básica de dispositivos dentro de una infraestructura local.
 
 La aplicación fue diseñada con foco en:
 
@@ -16,6 +16,21 @@ La aplicación fue diseñada con foco en:
 
 El objetivo principal es brindar una solución liviana y práctica para usuarios técnicos y también para usuarios con menor experiencia, permitiendo administrar accesos y monitoreo de manera visual e intuitiva.
 
+---
+
+# ✨ Características principales
+
+- Monitoreo de conectividad mediante ping
+- Integración con accesos VNC
+- Escaneo de puertos mediante Nmap
+- Descubrimiento de dispositivos en subred
+- Interfaz dinámica basada en Grid
+- Arquitectura MVVM
+- Persistencia local con SQLite
+- Configuración flexible y desacoplada
+- Componentes visuales dinámicos
+- Herramientas orientadas a infraestructura y redes
+  
 ---
 
 # :link: Tecnologías utilizadas
@@ -46,20 +61,17 @@ El objetivo principal es brindar una solución liviana y práctica para usuarios
 
 ## 🖥️ Menú de Accesos VNC
 
-El menú principal de Accesos VNC consiste en una grilla configurable dividida en módulos visuales.
+El módulo principal de la aplicación permite organizar accesos remotos mediante una interfaz dinámica basada en una Grid configurable.
 
-### Estructura de la grilla
+### Características
 
-La interfaz está compuesta por:
+- Grilla modular configurable
+- Organización visual por sectores o categorías
+- Componentes dinámicos
+- Accesos rápidos mediante VNC
+- Monitoreo visual de conectividad
 
-- Una grilla principal configurable
-- 10 módulos independientes dentro del mismo menú
-- Componentes visuales dinámicos
-- Sistema de configuración visual mediante “Guías”
-
-Cada módulo funciona como una sección independiente de la grilla principal, permitiendo organizar accesos por áreas, sectores o categorías.
-
-Ejemplos:
+### Casos de uso
 
 - Servidores
 - Cámaras
@@ -70,114 +82,89 @@ Ejemplos:
 
 ---
 
-## Sistema de Guías
+### 📐 Sistema de Guías
 
-La aplicación incluye un modo de configuración llamado:
+La aplicación incorpora un modo de configuración visual denominado:
 
 ```text
 Mostrar Guías
 ```
 
-Al activar esta opción:
+Este sistema permite:
 
-- Se generan botones guía sobre la grilla
-- Los espacios disponibles pueden configurarse visualmente
-- Cada espacio permite agregar componentes mediante menú contextual
+- Visualizar espacios disponibles dentro de la grilla
+- Configurar posiciones de componentes
+- Agregar elementos mediante menú contextual
 
-Las guías son únicamente utilizadas para configuración y organización del panel.
-
-No forman parte del modo operativo normal.
+Las guías son utilizadas únicamente durante la configuración del panel.
 
 ---
 
-## Componentes disponibles
+### 🔗 Accesos VNC
 
-### Acceso VNC
+Cada componente VNC permite generar accesos rápidos hacia dispositivos remotos.
 
-Permite crear accesos rápidos a dispositivos mediante VNC.
-
-#### Funcionamiento
-
-El usuario configura:
+El usuario puede configurar:
 
 - Nombre
 - Dirección IP
-- Posición en la grilla
+- Posición dentro de la interfaz
 
-Al presionar el botón:
+Al ejecutarse:
 
-- La aplicación ejecuta el software VNC instalado localmente
-- Se envía la dirección IP configurada
-- Se intenta establecer conexión remota automáticamente
+- La aplicación abre el cliente VNC instalado localmente
+- Se envía automáticamente la IP configurada
+- Se intenta establecer conexión remota
 
 ---
 
-### Monitoreo de conectividad
+### 📡 Monitoreo de conectividad
 
-Cada botón de acceso posee monitoreo visual basado en ping.
-
-#### Estados
+Los accesos incorporan monitoreo visual basado en ping.
 
 | Estado | Significado |
 |---|---|
-| Verde | El dispositivo responde conectividad |
-| Rojo | El dispositivo no responde ping |
+| 🟢 Verde | El dispositivo responde conectividad |
+| 🔴 Rojo | El dispositivo no responde |
 
-Esto permite utilizar el panel como una herramienta rápida de monitoreo visual de disponibilidad.
+Esto permite visualizar rápidamente el estado general de disponibilidad de los dispositivos.
 
 ---
 
-### Título
+### 🏷️ Componentes de Título
 
-Componente visual utilizado para organizar la interfaz.
+La interfaz permite agregar títulos visuales para organizar distintas secciones dentro de la grilla.
 
-Características:
-
-- Función exclusivamente visual
-- Permite separar secciones
-- Facilita lectura y organización del panel
-
-Restricción:
-
-- Un título y un botón no pueden compartir el mismo espacio de la grilla
+Su función es exclusivamente organizativa y visual.
 
 ---
 
 # ⚖️ Menú Balanzas
 
-El menú Balanzas está orientado al monitoreo de conectividad de dispositivos de pesaje dentro de la red local.
+Módulo orientado al monitoreo de dispositivos de pesaje dentro de la red local.
 
-## Características
+### Funcionalidades
 
-- Monitoreo por ping
+- Monitoreo mediante ping
 - Indicadores visuales de estado
 - Detección rápida de desconexiones
 - Vista centralizada de dispositivos
 
-El funcionamiento general es similar al sistema utilizado en Accesos VNC.
-
-> Nota:
-> La versión utilizada en producción posee funcionalidades adicionales relacionadas a integración y operaciones específicas. Algunas de esas funciones fueron retiradas o limitadas en esta versión por motivos de seguridad.
+> Algunas funcionalidades presentes en entornos de producción fueron retiradas o limitadas en esta versión por motivos de seguridad.
 
 ---
 
 # 🌐 Menú Dispositivos
 
-El menú Dispositivos permite centralizar accesos y monitoreo de distintos equipos de infraestructura.
+Permite centralizar accesos y monitoreo de distintos equipos de infraestructura.
 
-## Funcionalidades
+### Funcionalidades
 
-- Monitoreo de conectividad mediante ping
+- Monitoreo de conectividad
 - Apertura rápida de interfaces web
-- Acceso directo vía navegador
+- Acceso directo mediante navegador
 
-La aplicación permite abrir automáticamente la dirección IP del dispositivo en el navegador predeterminado del sistema.
-
----
-
-## Casos de uso
-
-Especialmente útil para:
+### Casos de uso
 
 - Impresoras
 - Access Points
@@ -185,23 +172,16 @@ Especialmente útil para:
 - Teléfonos IP
 - Firewalls
 - Equipos de red
-- Interfaces administrativas
 
 ---
 
 # 🔍 Menú Análisis de Subred
 
-Herramienta destinada a descubrimiento básico de dispositivos dentro de una subred.
+Herramienta destinada al descubrimiento básico de dispositivos dentro de una subred local.
 
-## Funcionamiento
+### Funcionamiento
 
-El usuario ingresa:
-
-```text
-Subred objetivo
-```
-
-Ejemplo:
+El usuario define una subred objetivo:
 
 ```text
 192.168.1
@@ -209,72 +189,56 @@ Ejemplo:
 
 La aplicación:
 
+- Escanea direcciones IP
 - Realiza pruebas de conectividad
-- Escanea direcciones IP de la subred
-- Devuelve una lista de hosts accesibles
+- Detecta hosts accesibles
 
----
-
-## Información obtenida
+### Información obtenida
 
 - IP detectadas
-- Dispositivos con respuesta
 - Estado de conectividad
+- Dispositivos activos
 
 ---
 
 # 🚪 Escaneo de Puertos
 
-La aplicación incorpora integración con Nmap para análisis más avanzados de red.
+Integración con Nmap para realizar análisis más avanzados de red.
 
-## Integración con Nmap
+### Funcionalidades
 
-La herramienta puede:
+- Ejecución de instrucciones Nmap
+- Procesamiento automático de XML
+- Visualización de resultados dentro de la interfaz
 
-- Ejecutar instrucciones Nmap
-- Obtener resultados en formato XML
-- Procesar automáticamente la información obtenida
-- Mostrar resultados relevantes dentro de la interfaz
+### Información procesada
 
----
-
-## Información procesada
-
-El sistema puede mostrar:
-
-- Instrucción ejecutada en Nmap
-- Dirección MAC del dispositivo
+- Dirección MAC
 - Hostname
-- Sistema operativo detectado (si está disponible)
+- Sistema operativo detectado
 - Puertos abiertos
 - Servicios detectados
 
----
-
-## Ejemplos de uso
+### Casos de uso
 
 - Diagnóstico de red
-- Validación de servicios activos
-- Verificación de conectividad
 - Auditorías básicas
-- Detección rápida de puertos expuestos
+- Verificación de servicios activos
+- Detección de puertos expuestos
 
 ---
 
 # ⚙️ Menú Configuración
 
-La aplicación dispone de un menú de configuración para administrar rutas y parámetros dinámicos.
+Panel destinado a administrar parámetros dinámicos de la aplicación.
 
-## Configuraciones disponibles
-
-Entre las configuraciones principales:
+### Configuraciones disponibles
 
 - Ruta de Nmap
 - Gateway de red
 
-Esto permite adaptar la herramienta fácilmente a distintos entornos sin necesidad de recompilar la aplicación.
+Esto permite adaptar la herramienta a distintos entornos sin necesidad de recompilar la aplicación.
 
----
 
 # :link: Arquitectura
 
