@@ -254,6 +254,117 @@ El proyecto fue desarrollado utilizando el patrón MVVM.
 
 ---
 
+# 🧩 Mecánica Compartida de Interfaz
+
+Varios menús de la aplicación comparten una misma mecánica de funcionamiento basada en una interfaz dinámica construida sobre una Grid configurable.
+
+Esta arquitectura permite reutilizar componentes visuales y mantener una experiencia consistente entre distintos menús del sistema.
+
+---
+
+## 🏗️ Estructura General
+
+La interfaz está compuesta por:
+
+- Una Grid principal configurable
+- Múltiples módulos independientes
+- Componentes dinámicos
+- Capas visuales superpuestas
+- Sistema de configuración mediante guías
+
+Cada módulo funciona como una sección independiente dentro de la interfaz principal, permitiendo organizar componentes según distintas necesidades operativas.
+
+---
+
+## 📐 Sistema de Guías
+
+La aplicación incorpora un modo de configuración visual denominado:
+
+```text
+Mostrar Guías
+```
+
+Al activarse:
+
+- Se generan botones guía sobre la Grid
+- Los espacios disponibles pueden visualizarse y configurarse
+- Los componentes pueden agregarse mediante menú contextual
+- La interfaz puede reorganizarse dinámicamente
+
+Las guías son utilizadas exclusivamente durante la configuración del panel y no forman parte del modo operativo normal.
+
+---
+
+## 🧱 Componentes Dinámicos
+
+Los módulos permiten agregar dos tipos principales de componentes visuales dentro de la Grid.
+
+- Botones 
+- Títulos 
+
+Cada componente puede posicionarse dinámicamente dentro de la interfaz.
+
+---
+
+## 🔘 Botones
+
+Los botones representan componentes interactivos cuyo comportamiento depende del menú donde se encuentren ubicados.
+
+Según el módulo, pueden permitir:
+
+- Apertura de conexiones VNC
+- Acceso rápido a interfaces web
+- Monitoreo visual mediante ping
+- Ejecución de acciones relacionadas a dispositivos
+- Visualización rápida de estados de conectividad
+
+Los botones incorporan indicadores visuales de estado para representar disponibilidad o respuesta de los dispositivos monitoreados.
+
+| Estado | Significado |
+|---|---|
+| 🟢 Verde | El dispositivo responde conectividad |
+| 🔴 Rojo | El dispositivo no responde |
+
+La funcionalidad específica de cada botón depende del contexto operativo del menú correspondiente.
+
+---
+
+## 🏷️ Títulos 
+
+Los títulos son componentes utilizados exclusivamente para organización visual dentro de la interfaz.
+
+Su función principal es:
+
+- Separar secciones
+- Mejorar legibilidad
+- Organizar categorías
+- Facilitar navegación visual
+
+Estos componentes no poseen comportamiento operativo ni interacción funcional.
+
+## 🧩 Arquitectura Multicapa
+
+La interfaz utiliza un sistema basado en múltiples capas visuales superpuestas.
+
+Este enfoque permite:
+
+- Separar lógica visual y operativa
+- Mostrar elementos de configuración temporalmente
+- Superponer componentes dinámicos
+- Mantener flexibilidad de organización
+
+## 🖥️ Módulos que utilizan esta mecánica
+
+Actualmente esta arquitectura es utilizada principalmente por:
+
+- Menú de Accesos VNC
+- Menú Balanzas
+- Menú Dispositivos
+
+Cada módulo adapta la misma base visual a distintos objetivos funcionales.
+
+---
+
 # :link: Finalidad del proyecto
 
 ## Objetivos del software
