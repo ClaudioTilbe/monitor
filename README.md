@@ -260,8 +260,6 @@ Varios menús de la aplicación comparten una misma mecánica de funcionamiento 
 
 Esta arquitectura permite reutilizar componentes visuales y mantener una experiencia consistente entre distintos menús del sistema.
 
----
-
 ## 🏗️ Estructura General
 
 La interfaz está compuesta por:
@@ -273,8 +271,6 @@ La interfaz está compuesta por:
 - Sistema de configuración mediante guías
 
 Cada módulo funciona como una sección independiente dentro de la interfaz principal, permitiendo organizar componentes según distintas necesidades operativas.
-
----
 
 ## 📐 Sistema de Guías
 
@@ -293,8 +289,6 @@ Al activarse:
 
 Las guías son utilizadas exclusivamente durante la configuración del panel y no forman parte del modo operativo normal.
 
----
-
 ## 🧱 Componentes Dinámicos
 
 Los módulos permiten agregar dos tipos principales de componentes visuales dentro de la Grid.
@@ -303,8 +297,6 @@ Los módulos permiten agregar dos tipos principales de componentes visuales dent
 - Títulos 
 
 Cada componente puede posicionarse dinámicamente dentro de la interfaz.
-
----
 
 ## 🔘 Botones
 
@@ -326,8 +318,6 @@ Los botones incorporan indicadores visuales de estado para representar disponibi
 | 🔴 Rojo | El dispositivo no responde |
 
 La funcionalidad específica de cada botón depende del contexto operativo del menú correspondiente.
-
----
 
 ## 🏷️ Títulos 
 
