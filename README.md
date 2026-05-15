@@ -140,7 +140,7 @@ La aplicación:
 
 ---
 
-# 🚪 Escaneo de Puertos
+# 🚪 Menú Escaneo de Puertos
 
 Integración con Nmap para realizar análisis más avanzados de red.
 
@@ -161,6 +161,7 @@ Integración con Nmap para realizar análisis más avanzados de red.
 ### Casos de uso
 
 Diagnóstico de red, auditorías básicas, verificación de servicios activos y detección rápida de puertos expuestos.
+
 ---
 
 # ⚙️ Menú Configuración
@@ -169,8 +170,9 @@ Panel destinado a administrar parámetros dinámicos de la aplicación.
 
 ### Configuraciones disponibles
 
-- Ruta de Nmap
 - Gateway de red
+- Ruta Nmap
+- Ruta VNC
 
 Esto permite adaptar la herramienta a distintos entornos sin necesidad de recompilar la aplicación.
 
