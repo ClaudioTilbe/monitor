@@ -1,4 +1,4 @@
-# > Proyecto actualmente en desarrollo y evolución continua.
+> Proyecto actualmente en desarrollo y evolución continua.
 
 
 ![](./assets/header.png)
@@ -69,15 +69,6 @@ Módulo orientado a centralizar accesos remotos hacia dispositivos dentro de la 
 - Organización de accesos por sectores o categorías
 - Monitoreo visual de conectividad
 - Administración visual de accesos internos
-
-### Casos de uso
-
-- Servidores
-- Cámaras
-- Equipos de oficina
-- Redes
-- Infraestructura
-- Producción
 
 > Este módulo utiliza la mecánica compartida de interfaz descrita en la sección [🧩 Mecánica Compartida de Interfaz](#-mecánica-compartida-de-interfaz)
 
