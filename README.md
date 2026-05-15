@@ -298,7 +298,7 @@ Los módulos permiten agregar dos tipos principales de componentes visuales dent
 
 Cada componente puede posicionarse dinámicamente dentro de la interfaz.
 
-## 🔘 Botones
+### 🔘 Botones
 
 Los botones representan componentes interactivos cuyo comportamiento depende del menú donde se encuentren ubicados.
 
@@ -319,7 +319,7 @@ Los botones incorporan indicadores visuales de estado para representar disponibi
 
 La funcionalidad específica de cada botón depende del contexto operativo del menú correspondiente.
 
-## 🏷️ Títulos 
+### 🏷️ Títulos 
 
 Los títulos son componentes utilizados exclusivamente para organización visual dentro de la interfaz.
 
