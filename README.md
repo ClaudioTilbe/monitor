@@ -72,7 +72,7 @@ Este menú está destinado exclusivamente a dispositivos accesibles mediante cli
 - Monitoreo visual de conectividad
 - Administración visual de accesos internos
 
-Puede utilizarse para organizar accesos hacia servidores, equipos de oficina, cámaras, dispositivos industriales o distintos equipos de infraestructura accesibles mediante VNC.
+Puede utilizarse para organizar accesos hacia servidores, equipos de oficina y distintos equipos de infraestructura accesibles mediante VNC.
 
 > Este módulo utiliza la mecánica compartida de interfaz descrita en la sección [🧩 Mecánica Compartida de Interfaz](#-mecánica-compartida-de-interfaz)
 
