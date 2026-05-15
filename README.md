@@ -280,16 +280,6 @@ Este enfoque permite:
 - Superponer componentes dinámicos
 - Mantener flexibilidad de organización
 
-## 🖥️ Módulos que utilizan esta mecánica
-
-Actualmente esta arquitectura es utilizada principalmente por:
-
-- Menú de Accesos VNC
-- Menú Balanzas
-- Menú Dispositivos
-
-Cada módulo adapta la misma base visual a distintos objetivos funcionales.
-
 ---
 
 # :link: Finalidad del proyecto
