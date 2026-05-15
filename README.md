@@ -61,15 +61,14 @@ El objetivo principal es brindar una solución liviana y práctica para usuarios
 
 ## 🖥️ Menú de Accesos VNC
 
-El módulo principal de la aplicación permite organizar accesos remotos mediante una interfaz dinámica basada en una Grid configurable.
+Módulo orientado a centralizar accesos remotos hacia dispositivos dentro de la infraestructura local mediante conexiones VNC.
 
-### Características
+### Funcionalidades
 
-- Grilla modular configurable
-- Organización visual por sectores o categorías
-- Componentes dinámicos
-- Accesos rápidos mediante VNC
+- Acceso rápido a dispositivos remotos
+- Organización de accesos por sectores o categorías
 - Monitoreo visual de conectividad
+- Administración visual de accesos internos
 
 ### Casos de uso
 
@@ -80,62 +79,7 @@ El módulo principal de la aplicación permite organizar accesos remotos mediant
 - Infraestructura
 - Producción
 
----
-
-### 📐 Sistema de Guías
-
-La aplicación incorpora un modo de configuración visual denominado:
-
-```text
-Mostrar Guías
-```
-
-Este sistema permite:
-
-- Visualizar espacios disponibles dentro de la grilla
-- Configurar posiciones de componentes
-- Agregar elementos mediante menú contextual
-
-Las guías son utilizadas únicamente durante la configuración del panel.
-
----
-
-### 🔗 Accesos VNC
-
-Cada componente VNC permite generar accesos rápidos hacia dispositivos remotos.
-
-El usuario puede configurar:
-
-- Nombre
-- Dirección IP
-- Posición dentro de la interfaz
-
-Al ejecutarse:
-
-- La aplicación abre el cliente VNC instalado localmente
-- Se envía automáticamente la IP configurada
-- Se intenta establecer conexión remota
-
----
-
-### 📡 Monitoreo de conectividad
-
-Los accesos incorporan monitoreo visual basado en ping.
-
-| Estado | Significado |
-|---|---|
-| 🟢 Verde | El dispositivo responde conectividad |
-| 🔴 Rojo | El dispositivo no responde |
-
-Esto permite visualizar rápidamente el estado general de disponibilidad de los dispositivos.
-
----
-
-### 🏷️ Componentes de Título
-
-La interfaz permite agregar títulos visuales para organizar distintas secciones dentro de la grilla.
-
-Su función es exclusivamente organizativa y visual.
+> Este módulo utiliza la mecánica compartida de interfaz descrita en la sección [🧩 Mecánica Compartida de Interfaz](#-mecánica-compartida-de-interfaz)
 
 ---
 
@@ -145,24 +89,27 @@ Módulo orientado al monitoreo de dispositivos de pesaje dentro de la red local.
 
 ### Funcionalidades
 
-- Monitoreo mediante ping
+- Monitoreo de conectividad
 - Indicadores visuales de estado
 - Detección rápida de desconexiones
 - Vista centralizada de dispositivos
 
 > Algunas funcionalidades presentes en entornos de producción fueron retiradas o limitadas en esta versión por motivos de seguridad.
 
+> Este módulo utiliza la mecánica compartida de interfaz descrita en la sección [🧩 Mecánica Compartida de Interfaz](#-mecánica-compartida-de-interfaz)
+
 ---
 
 # 🌐 Menú Dispositivos
 
-Permite centralizar accesos y monitoreo de distintos equipos de infraestructura.
+Módulo destinado a centralizar accesos y monitoreo de distintos equipos de infraestructura.
 
 ### Funcionalidades
 
 - Monitoreo de conectividad
 - Apertura rápida de interfaces web
 - Acceso directo mediante navegador
+- Organización centralizada de dispositivos
 
 ### Casos de uso
 
@@ -172,6 +119,8 @@ Permite centralizar accesos y monitoreo de distintos equipos de infraestructura.
 - Teléfonos IP
 - Firewalls
 - Equipos de red
+
+> Este módulo utiliza la mecánica compartida de interfaz descrita en la sección [🧩 Mecánica Compartida de Interfaz](#-mecánica-compartida-de-interfaz)
 
 ---
 
