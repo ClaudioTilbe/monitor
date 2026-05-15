@@ -63,12 +63,16 @@ El objetivo principal es brindar una solución liviana y práctica para usuarios
 
 Módulo orientado a centralizar accesos remotos hacia dispositivos dentro de la infraestructura local mediante conexiones VNC.
 
+Este menú está destinado exclusivamente a dispositivos accesibles mediante clientes VNC.
+
 ### Funcionalidades
 
 - Acceso rápido a dispositivos remotos
 - Organización de accesos por sectores o categorías
 - Monitoreo visual de conectividad
 - Administración visual de accesos internos
+
+Puede utilizarse para organizar accesos hacia servidores, equipos de oficina, cámaras, dispositivos industriales o distintos equipos de infraestructura accesibles mediante VNC.
 
 > Este módulo utiliza la mecánica compartida de interfaz descrita en la sección [🧩 Mecánica Compartida de Interfaz](#-mecánica-compartida-de-interfaz)
 
@@ -93,7 +97,9 @@ Módulo orientado al monitoreo de dispositivos de pesaje dentro de la red local.
 
 # 🌐 Menú Dispositivos
 
-Módulo destinado a centralizar accesos y monitoreo de distintos equipos de infraestructura.
+Módulo destinado a centralizar accesos y monitoreo de distintos equipos de infraestructura accesibles mediante interfaces web por dirección IP desde el navegador.
+
+Este menú está pensado principalmente para dispositivos que poseen paneles de administración web integrados.
 
 ### Funcionalidades
 
@@ -102,14 +108,7 @@ Módulo destinado a centralizar accesos y monitoreo de distintos equipos de infr
 - Acceso directo mediante navegador
 - Organización centralizada de dispositivos
 
-### Casos de uso
-
-- Impresoras
-- Access Points
-- Switches
-- Teléfonos IP
-- Firewalls
-- Equipos de red
+Puede utilizarse con impresoras, access points, switches, teléfonos IP, firewalls, routers y distintos dispositivos de red con interfaces administrativas web.
 
 > Este módulo utiliza la mecánica compartida de interfaz descrita en la sección [🧩 Mecánica Compartida de Interfaz](#-mecánica-compartida-de-interfaz)
 
@@ -161,11 +160,7 @@ Integración con Nmap para realizar análisis más avanzados de red.
 
 ### Casos de uso
 
-- Diagnóstico de red
-- Auditorías básicas
-- Verificación de servicios activos
-- Detección de puertos expuestos
-
+Diagnóstico de red, auditorías básicas, verificación de servicios activos y detección rápida de puertos expuestos.
 ---
 
 # ⚙️ Menú Configuración
