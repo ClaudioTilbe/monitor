@@ -65,6 +65,8 @@ Módulo orientado a centralizar accesos remotos hacia dispositivos dentro de la 
 
 Este menú está destinado exclusivamente a dispositivos accesibles mediante clientes VNC.
 
+![](https://github.com/ClaudioTilbe/monitor/blob/ca90cb50aa87916a5b34b8963b32d9f2e439114a/assets/Menu%20Acceso%20VNC.gif)
+
 ### Funcionalidades
 
 - Acceso rápido a dispositivos remotos
@@ -100,6 +102,8 @@ Módulo orientado al monitoreo de dispositivos de pesaje dentro de la red local.
 Módulo destinado a centralizar accesos y monitoreo de distintos equipos de infraestructura accesibles mediante interfaces web por dirección IP desde el navegador.
 
 Este menú está pensado principalmente para dispositivos que poseen paneles de administración web integrados.
+
+![](https://github.com/ClaudioTilbe/monitor/blob/ca90cb50aa87916a5b34b8963b32d9f2e439114a/assets/Menu%20Dispositivos.gif)
 
 ### Funcionalidades
 
