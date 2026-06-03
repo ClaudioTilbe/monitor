@@ -16,7 +16,7 @@
 
 * **[5 - Finalidad del proyecto](#link-finalidad-del-proyecto-5)**
 
-* **[Capítulo 6 - Planificación](#link-planificación-6)**
+* **[6 - Seguridad](#link-seguridad-6)**
 
 ---
 
@@ -159,7 +159,7 @@ Puede utilizarse con impresoras, access points, switches, teléfonos IP, firewal
 
 Herramienta destinada al descubrimiento básico de dispositivos dentro de una subred local.
 
-### Funcionamiento
+### Funcionalidades
 
 El usuario define una subred objetivo:
 
@@ -167,11 +167,7 @@ El usuario define una subred objetivo:
 192.168.1
 ```
 
-La aplicación:
-
-- Escanea direcciones IP
-- Realiza pruebas de conectividad
-- Detecta hosts accesibles
+A partir de la subred indicada, la aplicación realiza un escaneo de las direcciones IP disponibles, ejecuta pruebas de conectividad y detecta los hosts que se encuentran accesibles dentro de la red.
 
 ### Información obtenida
 
@@ -191,7 +187,7 @@ Integración con Nmap para realizar análisis más avanzados de red.
 - Procesamiento automático de XML
 - Visualización de resultados dentro de la interfaz
 
-### Información procesada
+### Información obtenida
 
 - Dirección MAC
 - Hostname
@@ -283,7 +279,7 @@ En conjunto, el desarrollo de Monitor funcionó tanto como una herramienta de us
 ---
 
 
-# :link: SEGURIDAD (5)
+# :link: SEGURIDAD (6)
 
 Algunas funcionalidades utilizadas internamente en ambientes de producción fueron retiradas o limitadas dentro de esta versión por motivos de seguridad.
 
