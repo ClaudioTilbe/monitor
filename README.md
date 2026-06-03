@@ -6,35 +6,17 @@
 
 # Índice
 
-* **[Capítulo 1 - Introduccion](#link-introducción-1)**
+* **[1 - Características principales](#link-características-principales-1)**
 
-* **[Capítulo 2 - Descripción del negocio y requerimientos](#link-descripción-del-negocio-y-requerimientos-2)**
+* **[Capítulo 2 - Tecnologías utilizadas](#link-tecnologías-utilizadas-2)**
 
-* **[Capítulo 3 - Tecnologías y plataformas](#link-tecnologías-y-plataformas-3)**
+* **[Capítulo 3 - Funciones](#link-funciones-3)**
 
-* **[Capítulo 4 - Evaluación de riesgos](#link-evaluación-de-riesgos-4)**
+* **[Capítulo 4 - Arquitectura](#link-arquitectura-4)**
 
 * **[Capítulo 5 - Casos de uso](#link-casos-de-uso-5)**
 
 * **[Capítulo 6 - Planificación](#link-planificación-6)**
-
-* **[Capítulo 7 - Modelo conceptual](#link-modelo-conceptual-7)**
-
-* **[Capítulo 8 - Análisis y diseño](#link-análisis-y-diseño-8)**
-
-* **[Capítulo 9 - Arquitectura y patrones](#link-arquitectura-y-patrones-9)**
-
-* **[Capítulo 10 - Cambios, problemas y replanificaciones](#link-cambios-problemas-y-replanificaciones-10)**
-
-* **[Capítulo 11 - Investigación](#link-investigación-11)**
-
-* **[Capítulo 12 - Testing y pruebas de calidad](#link-testing-y-pruebas-de-calidad-12)**
-
-* **[Capítulo 13 - Anexos](#link-anexos-13)**
-
-* **[Capítulo 14 - Actualizaciones](#link-actualizaciones-14)**
-
-* **[Capítulo 15 - Un vistazo a la aplicación](#link-un-vistazo-a-la-aplicacion-15)**
 
 ---
 
@@ -313,7 +295,8 @@ Este enfoque permite:
 
 ---
 
-# :link: Finalidad del proyecto
+
+# :link: FINALIDAD DEL PROYECTO (5)
 
 ## Objetivos del software
 
