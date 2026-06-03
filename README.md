@@ -3,18 +3,7 @@
 
 ![](./assets/header.png)
 
-**Monitor** es una herramienta de escritorio desarrollada en WPF utilizando el patrón MVVM, orientada a simplificar tareas de monitoreo, acceso y administración básica de dispositivos dentro de una infraestructura local.
-
-La aplicación fue diseñada con foco en:
-
-- Simplicidad de uso
-- Configuración flexible
-- Monitoreo rápido de conectividad
-- Acceso centralizado a recursos internos
-- Facilidad de mantenimiento
-- Adaptabilidad frente a cambios en la infraestructura
-
-El objetivo principal es brindar una solución liviana y práctica para usuarios técnicos y también para usuarios con menor experiencia, permitiendo administrar accesos y monitoreo de manera visual e intuitiva.
+**Monitor** es una herramienta de escritorio desarrollada en WPF bajo el patrón de arquitectura MVVM, diseñada para simplificar las tareas de monitoreo, acceso y administración básica de dispositivos dentro de una infraestructura local. La aplicación proporciona una experiencia de uso sencilla e intuitiva, permitiendo centralizar el acceso a recursos internos y realizar verificaciones rápidas de conectividad desde una única interfaz. Su diseño prioriza la flexibilidad de configuración, la facilidad de mantenimiento y la capacidad de adaptación ante cambios en la infraestructura, ofreciendo una solución liviana y práctica tanto para usuarios técnicos como para aquellos con menor experiencia en entornos de administración y soporte.
 
 ---
 
