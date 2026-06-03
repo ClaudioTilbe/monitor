@@ -8,13 +8,13 @@
 
 * **[1 - Características principales](#link-características-principales-1)**
 
-* **[Capítulo 2 - Tecnologías utilizadas](#link-tecnologías-utilizadas-2)**
+* **[2 - Tecnologías utilizadas](#link-tecnologías-utilizadas-2)**
 
-* **[Capítulo 3 - Funciones](#link-funciones-3)**
+* **[3 - Funciones](#link-funciones-3)**
 
-* **[Capítulo 4 - Arquitectura](#link-arquitectura-4)**
+* **[4 - Arquitectura](#link-arquitectura-4)**
 
-* **[Capítulo 5 - Casos de uso](#link-casos-de-uso-5)**
+* **[5 - Finalidad del proyecto](#link-finalidad-del-proyecto-5)**
 
 * **[Capítulo 6 - Planificación](#link-planificación-6)**
 
@@ -64,6 +64,38 @@
 
 # :link: FUNCIONES (3)
 
+## 🧩 Mecánica Compartida de Interfaz
+
+Varios módulos de la aplicación comparten una misma estructura basada en una Grid configurable que permite construir interfaces dinámicas y reutilizables. Este enfoque proporciona una experiencia consistente entre los distintos menús y facilita la personalización de la distribución de componentes.
+
+### 📐 Configuración mediante Guías
+
+La aplicación incluye un modo de edición denominado **"Mostrar Guías"**, que permite visualizar los espacios disponibles dentro de la Grid y agregar componentes de forma interactiva mediante menús contextuales. Estas guías son utilizadas únicamente durante la configuración y permanecen ocultas durante el uso normal de la aplicación.
+
+### 🧱 Componentes Disponibles
+
+Los módulos pueden incorporar dos tipos principales de elementos:
+
+#### 🔘 Botones
+
+Componentes interactivos cuyo comportamiento depende del menú en el que se encuentren. Entre sus usos se incluyen accesos VNC, apertura de interfaces web, monitoreo de conectividad y ejecución de acciones sobre dispositivos.
+
+Los botones pueden mostrar indicadores visuales de estado:
+
+| Estado   | Significado                           |
+| -------- | ------------------------------------- |
+| 🟢 Verde | El dispositivo responde correctamente |
+| 🔴 Rojo  | El dispositivo no responde            |
+
+#### 🏷️ Títulos
+
+Elementos destinados exclusivamente a la organización visual de la interfaz, permitiendo agrupar y separar secciones para mejorar la legibilidad y navegación.
+
+### 🏗️ Diseño Modular
+
+La interfaz se apoya en una arquitectura visual multicapa que permite superponer elementos de configuración y componentes dinámicos sin afectar el funcionamiento operativo. Este diseño facilita la reorganización de la interfaz y la incorporación de nuevos elementos manteniendo una estructura flexible y escalable.
+
+
 ## 🖥️ Menú de Accesos VNC
 
 Módulo orientado a centralizar accesos remotos hacia dispositivos dentro de la infraestructura local mediante conexiones VNC.
@@ -85,7 +117,7 @@ Puede utilizarse para organizar accesos hacia servidores, equipos de oficina y d
 
 ---
 
-# ⚖️ Menú Balanzas
+## ⚖️ Menú Balanzas
 
 Módulo orientado al monitoreo de dispositivos de pesaje dentro de la red local.
 
@@ -102,7 +134,7 @@ Módulo orientado al monitoreo de dispositivos de pesaje dentro de la red local.
 
 ---
 
-# 🌐 Menú Dispositivos
+## 🌐 Menú Dispositivos
 
 Módulo destinado a centralizar accesos y monitoreo de distintos equipos de infraestructura accesibles mediante interfaces web por dirección IP desde el navegador.
 
@@ -123,7 +155,7 @@ Puede utilizarse con impresoras, access points, switches, teléfonos IP, firewal
 
 ---
 
-# 🔍 Menú Análisis de Subred
+## 🔍 Menú Análisis de Subred
 
 Herramienta destinada al descubrimiento básico de dispositivos dentro de una subred local.
 
@@ -149,7 +181,7 @@ La aplicación:
 
 ---
 
-# 🚪 Menú Escaneo de Puertos
+## 🚪 Menú Escaneo de Puertos
 
 Integración con Nmap para realizar análisis más avanzados de red.
 
@@ -173,7 +205,7 @@ Diagnóstico de red, auditorías básicas, verificación de servicios activos y 
 
 ---
 
-# ⚙️ Menú Configuración
+## ⚙️ Menú Configuración
 
 Panel destinado a administrar parámetros dinámicos de la aplicación.
 
@@ -201,97 +233,6 @@ Mayor facilidad para incorporar nuevas funcionalidades.
 Mejor reutilización de componentes.
 Facilita la realización de pruebas y futuras refactorizaciones.
 Mayor desacoplamiento entre la interfaz y la lógica de negocio.
-
----
-
-# 🧩 Mecánica Compartida de Interfaz
-
-Varios menús de la aplicación comparten una misma mecánica de funcionamiento basada en una interfaz dinámica construida sobre una Grid configurable.
-
-Esta arquitectura permite reutilizar componentes visuales y mantener una experiencia consistente entre distintos menús del sistema.
-
-## 🏗️ Estructura General
-
-La interfaz está compuesta por:
-
-- Una Grid principal configurable
-- Múltiples módulos independientes
-- Componentes dinámicos
-- Capas visuales superpuestas
-- Sistema de configuración mediante guías
-
-Cada módulo funciona como una sección independiente dentro de la interfaz principal, permitiendo organizar componentes según distintas necesidades operativas.
-
-## 📐 Sistema de Guías
-
-La aplicación incorpora un modo de configuración visual denominado:
-
-```text
-Mostrar Guías
-```
-
-Al activarse:
-
-- Se generan botones guía sobre la Grid
-- Los espacios disponibles pueden visualizarse y configurarse
-- Los componentes pueden agregarse mediante menú contextual
-- La interfaz puede reorganizarse dinámicamente
-
-Las guías son utilizadas exclusivamente durante la configuración del panel y no forman parte del modo operativo normal.
-
-## 🧱 Componentes Dinámicos
-
-Los módulos permiten agregar dos tipos principales de componentes visuales dentro de la Grid.
-
-- Botones 
-- Títulos 
-
-Cada componente puede posicionarse dinámicamente dentro de la interfaz.
-
-### 🔘 Botones
-
-Los botones representan componentes interactivos cuyo comportamiento depende del menú donde se encuentren ubicados.
-
-Según el módulo, pueden permitir:
-
-- Apertura de conexiones VNC
-- Acceso rápido a interfaces web
-- Monitoreo visual mediante ping
-- Ejecución de acciones relacionadas a dispositivos
-- Visualización rápida de estados de conectividad
-
-Los botones incorporan indicadores visuales de estado para representar disponibilidad o respuesta de los dispositivos monitoreados.
-
-| Estado | Significado |
-|---|---|
-| 🟢 Verde | El dispositivo responde conectividad |
-| 🔴 Rojo | El dispositivo no responde |
-
-La funcionalidad específica de cada botón depende del contexto operativo del menú correspondiente.
-
-### 🏷️ Títulos 
-
-Los títulos son componentes utilizados exclusivamente para organización visual dentro de la interfaz.
-
-Su función principal es:
-
-- Separar secciones
-- Mejorar legibilidad
-- Organizar categorías
-- Facilitar navegación visual
-
-Estos componentes no poseen comportamiento operativo ni interacción funcional.
-
-## 🧩 Arquitectura Multicapa
-
-La interfaz utiliza un sistema basado en múltiples capas visuales superpuestas.
-
-Este enfoque permite:
-
-- Separar lógica visual y operativa
-- Mostrar elementos de configuración temporalmente
-- Superponer componentes dinámicos
-- Mantener flexibilidad de organización
 
 ---
 
