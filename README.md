@@ -250,13 +250,7 @@ Monitor fue desarrollado como una pequeña herramienta enfocada en:
 - Reducir tiempos de acceso y validación
 - Brindar una interfaz sencilla para usuarios menos experimentados
 
-La aplicación busca ser:
-
-- Liviana
-- Sostenible
-- Fácil de configurar
-- Adaptable a cambios en la infraestructura local
-- Rápida de utilizar en entornos operativos reales
+Para cumplir estos objetivos, la aplicación fue diseñada como una solución liviana, sostenible y fácil de configurar, capaz de adaptarse a cambios en la infraestructura local y ofrecer una experiencia de uso rápida y práctica en entornos operativos reales.
 
 ## Objetivos personales
 
@@ -289,7 +283,7 @@ En conjunto, el desarrollo de Monitor funcionó tanto como una herramienta de us
 ---
 
 
-# Seguridad
+# :link: SEGURIDAD (5)
 
 Algunas funcionalidades utilizadas internamente en ambientes de producción fueron retiradas o limitadas dentro de esta versión por motivos de seguridad.
 
