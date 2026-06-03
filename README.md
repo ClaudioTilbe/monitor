@@ -1,13 +1,45 @@
-> Proyecto actualmente en desarrollo y evolución continua.
-
-
 ![](./assets/header.png)
 
 **Monitor** es una herramienta de escritorio desarrollada en WPF bajo el patrón de arquitectura MVVM, diseñada para simplificar las tareas de monitoreo, acceso y administración básica de dispositivos dentro de una infraestructura local. La aplicación proporciona una experiencia de uso sencilla e intuitiva, permitiendo centralizar el acceso a recursos internos y realizar verificaciones rápidas de conectividad desde una única interfaz. Su diseño prioriza la flexibilidad de configuración, la facilidad de mantenimiento y la capacidad de adaptación ante cambios en la infraestructura, ofreciendo una solución liviana y práctica tanto para usuarios técnicos como para aquellos con menor experiencia en entornos de administración y soporte.
 
 ---
 
-# ✨ Características principales
+# Índice
+
+* **[Capítulo 1 - Introduccion](#link-introducción-1)**
+
+* **[Capítulo 2 - Descripción del negocio y requerimientos](#link-descripción-del-negocio-y-requerimientos-2)**
+
+* **[Capítulo 3 - Tecnologías y plataformas](#link-tecnologías-y-plataformas-3)**
+
+* **[Capítulo 4 - Evaluación de riesgos](#link-evaluación-de-riesgos-4)**
+
+* **[Capítulo 5 - Casos de uso](#link-casos-de-uso-5)**
+
+* **[Capítulo 6 - Planificación](#link-planificación-6)**
+
+* **[Capítulo 7 - Modelo conceptual](#link-modelo-conceptual-7)**
+
+* **[Capítulo 8 - Análisis y diseño](#link-análisis-y-diseño-8)**
+
+* **[Capítulo 9 - Arquitectura y patrones](#link-arquitectura-y-patrones-9)**
+
+* **[Capítulo 10 - Cambios, problemas y replanificaciones](#link-cambios-problemas-y-replanificaciones-10)**
+
+* **[Capítulo 11 - Investigación](#link-investigación-11)**
+
+* **[Capítulo 12 - Testing y pruebas de calidad](#link-testing-y-pruebas-de-calidad-12)**
+
+* **[Capítulo 13 - Anexos](#link-anexos-13)**
+
+* **[Capítulo 14 - Actualizaciones](#link-actualizaciones-14)**
+
+* **[Capítulo 15 - Un vistazo a la aplicación](#link-un-vistazo-a-la-aplicacion-15)**
+
+---
+
+
+# :link: CARACTERÍSTICAS PRINCIPALES (1)
 
 - Monitoreo de conectividad mediante ping
 - Integración con accesos VNC
@@ -22,7 +54,8 @@
   
 ---
 
-# :link: Tecnologías utilizadas
+
+# :link: TECNOLOGÍAS UTILIZADAS (2)
 
 ## UI / Frontend
 - WPF (.NET)
@@ -46,7 +79,8 @@
 
 ---
 
-# :link: Funciones
+
+# :link: FUNCIONES (3)
 
 ## 🖥️ Menú de Accesos VNC
 
@@ -170,17 +204,21 @@ Panel destinado a administrar parámetros dinámicos de la aplicación.
 Esto permite adaptar la herramienta a distintos entornos sin necesidad de recompilar la aplicación.
 
 
-# :link: Arquitectura
+# :link: ARQUITECTURA (4)
 
-El proyecto fue desarrollado utilizando el patrón MVVM.
+El proyecto fue desarrollado utilizando el patrón arquitectónico MVVM (Model-View-ViewModel). Si bien para una aplicación de este tamaño una arquitectura de este tipo puede resultar más compleja de lo estrictamente necesario, se optó por implementarla como parte de un proceso de aprendizaje orientado a comprender su funcionamiento, beneficios y desafíos en un entorno real de desarrollo.
 
-## Beneficios
+La primera versión de la aplicación fue construida siguiendo un enfoque tradicional basado en XAML y Code-Behind, donde la lógica de la interfaz se encontraba directamente en los archivos .xaml.cs. A medida que el proyecto evolucionó, se realizó una refactorización gradual hacia una arquitectura MVVM, separando responsabilidades y desacoplando la lógica de negocio de la capa de presentación.
 
-- Separación clara de responsabilidades
-- Mejor mantenibilidad
-- Mayor escalabilidad
-- Código más limpio y reutilizable
-- Facilidad para testing y evolución futura
+Esta transición permitió adquirir experiencia práctica en la implementación de patrones de diseño ampliamente utilizados en aplicaciones WPF modernas, así como comprender las ventajas que aportan en términos de organización del código, mantenibilidad y escalabilidad.
+
+## Beneficios de MVVM
+Separación clara de responsabilidades.
+Mejor mantenibilidad del código.
+Mayor facilidad para incorporar nuevas funcionalidades.
+Mejor reutilización de componentes.
+Facilita la realización de pruebas y futuras refactorizaciones.
+Mayor desacoplamiento entre la interfaz y la lógica de negocio.
 
 ---
 
